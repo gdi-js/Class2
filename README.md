@@ -1,2 +1,2 @@
-# Class
-Course material for GDI JS Class
+# Class2
+Course material for GDI JS **Class 2:** Functions and Control Flow
