@@ -8,7 +8,7 @@ Course material for GDI JS **Class 2:** Functions and Control Flow
 ---
 Hi am Denise Nguyen my teaching slides were based off the slides and materials that are hosted at http://girldevelopit.github.io/gdi-featured-js-intro/. You can find a version of my slides at 
 
-[Google Doc with Slides](https://docs.google.com/document/d/e/2PACX-1vQuUwBnt0YhsDTxpTAfk0Q4j1FZUxLkkbqfbhqeVrT7OnhAceVcV5LuUqPer3z3Rf2zN0FNxkPCantn/pub)
+[Class 2 Slides](https://docs.google.com/presentation/d/e/2PACX-1vTICedoK9_kqq0T4t6ib5ZFv4aRIXvSTl2QomD0Onx6QDeZDlqHK4_339Yz6uz6bttfVQYY8nbkhlys/pub?start=true&loop=true&delayms=3000&slide=id.g37f25d62e6_0_198)
 
 ---
 
