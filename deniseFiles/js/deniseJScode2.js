@@ -29,10 +29,15 @@ function parrotFacts() {
 	######################################################
 */
 function sentence(){
-	var mySentence = 'Hello I\'m Denise Nguyen!';
+	var mySentence = "Hello I'm Denise Nguyen!";
 	//TEST TO SEE IF IT WORKS	
 	//console.log(mySentence);
+	//PRINTS OUT TO THE HTML PAGE 
+	//LOOKS FOR p1 ID THEN PRINTS mySentence
 	document.getElementById("p1").innerHTML=(mySentence);
+	//FILL IN NUMBER 5 WITH IN MY PARAGRAPH 
+	var kittyNumber = 5;
+	document.getElementById("p2").innerHTML=(kittyNumber);
 }
 
 /*
@@ -54,15 +59,15 @@ function nameFunction1(){
 }
 
 function nameFunction2(){
-    var firstName = 'Jane';
-    var lastName = 'Smith';
+    var firstName = 'Wonder';
+    var lastName = 'Woman';
     var fullName = firstName + ' ' + lastName;  
     document.getElementById("Name2").value = fullName;
 }
 
 function nameFunction3(){
-	var firstName = 'Joe';
-	var lastName = 'Smith';
+	var firstName = 'Sailor';
+	var lastName = 'Moon';
 	var fullName = firstName + ' ' + lastName;  
 	document.getElementById("Name3").innerHTML = fullName;
 }
@@ -82,13 +87,23 @@ var squareOfFive = square(5); // squareOfFive equals '25'
 	Use that function to set the value of a variable.
 	######################################################
 */
-function nameStatement(first,last) {
-	return "Hello " + first + " " + last;
+function nameStatement(firstName,lastName) {
+	return "Hello " + firstName + " " + lastName;
 }
 console.log(nameStatement("John","Smith"));
-//console.log(nameStatement("John","Smith"));
-//console.log(nameStatement("Jane","Smith"));
-//document.getElementById("poop").innerHTML(nameStatement("John"));
+console.log(nameStatement("Jane","Smith"));
+
+function myFunction(first,last) {
+	return 'Hello ' + first + " " +last;
+}
+/*
+	setName(); passes arguments into a helper function
+	sets the return value of the helper function into the input
+	field of the HTML
+*/
+function setName(first,last){
+	document.getElementById("Name2").value = myFunction(first,last);
+ }
 
 /*	
 	######################################################
@@ -99,9 +114,9 @@ console.log(nameStatement("John","Smith"));
 	######################################################
 */
 function temp1(){
-var temperature= 30;
+	var temperature= 30;
 	if (temperature < 50) {
-	    console.log("It is " + temperature + " degrees outside \n Put on a coat");
+		console.log("It is " + temperature + " degrees outside \n  Put on a coat");
 	} 
 }
 //temp1();
@@ -121,13 +136,17 @@ var temperature= 30;
 var userInputTemperature;	//GLOBAL VARIABLE
 function temp2(){
 	userInputTemperature = document.getElementById("tempInput").value;
-	if (userInputTemperature < 30) {
-		alert('Wear a coat and a hat')
+	if (userInputTemperature <= 0){
+		alert("Stay inside");
+	} 
+	else if (userInputTemperature < 30) {
+		alert('Wear a coat and a hat');
 	} else if (userInputTemperature < 50) {
 		alert('Put on a coat');
 	} else if (userInputTemperature < 65) {
 		alert('Wear just a sweater');
-	} else {
+	}
+	else {
 		alert('Wear whatever you want(:');
 	}
 }
@@ -138,17 +157,30 @@ function temp2(){
 	Add a logical operator to your "what to wear" program.
 	######################################################
 */
-function temp3(){
+function temp3(){	
+	var elem = document.createElement("img")
 	userInputTemperature = document.getElementById("tempInput").value;
 	if (userInputTemperature < 0 || userInputTemperature > 100) {
-    	alert(' STAY INSIDE!!!! it is terrible out there');
+		alert(' STAY INSIDE!!!! it is terrible out there');
 	} else if (userInputTemperature < 30) {
-		alert('Wear a coat and a hat')
+		alert('Wear a coat and a hat');
+		document.getElementById("whatToWear").appendChild(elem).style.width = "40%";
+		elem.src = 'images/both.png';
 	} else if (userInputTemperature < 50) {
 		alert('Put on a coat');
+		document.getElementById("whatToWear").appendChild(elem).style.width = "40%";
+		elem.src = 'images/PinkCoat.png';
 	} else if (userInputTemperature < 65) {
 		alert('Wear just a sweater');
+		document.getElementById("whatToWear").appendChild(elem).style.width = "40%";
+		elem.src = 'images/sweaterPink.png';
 	} else {
 		alert('Wear whatever you want(:');
 	}
 }
+
+function kittyNeeds(person) {
+	return 'I need ' + person + '!!!!! =^.,.^=';
+}
+
+console.log(kittyNeeds("Michi"));

@@ -11,8 +11,6 @@
   <head>
     <title>Class 2: Functions and Control Flow</title>
     <link rel="icon" href="images/gdi.png"/>
-    <!-- LINK TO JS -->
-    <script src="js/deniseJScode2.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="css/stylesheet.css" rel="stylesheet">
@@ -67,7 +65,11 @@
     </code>
     </p>
     <hr>
-    <p id="p1"></p> 
+    <p id="p1">
+    </p> 
+    <p>This is my awesome JavaScript Code. I love kitties, I have 
+        <span id="p2"></span> and I  love them all.
+    </p>
   </div>
 
   <div class="container" name="Section 2.2">
@@ -79,17 +81,18 @@
     <hr>
     <code>Example 1:</code> Prints on function call. <br>
     <p id="Name1"></p>
-    <script>nameFunction1();</script>
     <hr>
 
     <p>
       <code>Example 2:</code> This button "Click Me!" triggers the function when clicking on it, it will then display the declared first and last name.. 
     </p>
       <input type = "text" id = "Name2" placeholder = "NAME" disabled/>
-      <button onclick="nameFunction2();"> Click Me! </button>
+      <button onclick="setName('Denise','Nguyen');"> 
+        Click This! </button>
     <hr>
     <p>
-      <code>Example 3:</code>This button "Click Me" triggers the function when clicking on the paragraph.
+      <code>Example 3:</code>This paragraph "The Name Here" 
+      triggers the function when clicking on the paragraph.
     </p>
     <p id ="Name3" onclick = "nameFunction3();"> The Name Here </p>
     <hr>
@@ -101,13 +104,8 @@
           <li>Add a return statement to your 'name' function.</li>
           <li>Use that function to set the value of a variable.</li>
       </p>
-    <p id="Name4"></p>
-    <script>
-        function myFunction(name,last) {
-            return "Hello " + name + " " +last;
-        }
-        document.getElementById("Name4").innerHTML = myFunction("John","Smith");
-    </script>
+      <p id="meow"></p>
+
   </div>
 
   <div class="container" name="Section 2.5">
@@ -121,18 +119,13 @@
     </p>
     <hr>
     <input type = "text" id = "tempInput" placeholder = "Enter in a temp"/>
-    <button onclick="temp2();">What to Wear</button>
+    <button onclick="temp3()">What to Wear</button>
+    <br><br>
+    <p id="whatToWear" style="text-align: center;"> </p>
+
 
   </div>
 
-
-
-    <script>
-      //parrotFacts();
-      //sentence();
-      //square();
-      //temp();
-    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -140,5 +133,18 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- LINK TO JS -->
+    <script src="js/deniseJScode2.js"></script>
+    <script>
+      parrotFacts();
+      sentence();
+      nameStatement();
+      nameFunction1();
+      //alert(myFunction("Denise","Meow"));
+
+      //square();
+      //temp();
+    </script>
+
   </body>
 </html>
